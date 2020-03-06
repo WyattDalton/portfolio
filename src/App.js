@@ -3,7 +3,7 @@ import {
   BrowserRouter,
   Route,
   Switch,
-  Redirect,
+  Redirect
  } from 'react-router-dom';
 import './theme.min.css';
 import './theme.js';
@@ -13,6 +13,7 @@ import './theme.js';
 import Hero from './components/hero';
 import FrontpageNav from './components/FrontpageNav';
 import Portfolio from './components/Portfolio';
+import PortfolioItem from './components/PortfolioItem';
 import Bio from './components/Bio';
 import Footer from './components/Footer';
 
@@ -52,47 +53,43 @@ class App extends Component {
       })
   }
 
-  
-
   render() {
 
     if(this.state.hero.length === 0) return null;
-    if(this.state.bio.length === 0) return null;
-    if(this.state.mission.length === 0) return null;
-    if(this.state.detailed_skillset.length === 0) return null;
-    if(this.state.detailed_learning.length === 0) return null;
-    if(this.state.portfolioItems.length === 0) return null;
 
-
-    console.log('ready')
 
 
     return (
       <>
       <BrowserRouter>
-
         <Hero data={ this.state.hero } />
-
         <FrontpageNav />
-
         <div id="primary" className="content-area">
-          <main id="main" className="site-main front-dynamic-container">
+            <main id="main" className="site-main front-dynamic-container">
 
             <Switch>
-              <Redirect exact from="/" to="/portfolio" />
-              <Route path="/portfolio" render={ () => <Portfolio data={ this.state.portfolioItems } /> } />
-              <Route path="/bio" render={ () => <Bio 
-                                                      bio={ this.state.bio }
-                                                      mission={ this.state.mission }
-                                                      learning={this.state.detailed_learning }
-                                                      skillset={ this.state.detailed_skillset } 
-                                                      /> } />
-            </Switch>
+              <Redirect exact from="/" to="/work" />
 
+              <Route exact path="/work" render={ props => <Portfolio 
+                                                           data={ this.state.portfolioItems } 
+                                                           match={props.match}
+                                                           /> } />
+
+              <Route path="/work/:id" render={ props => <PortfolioItem  
+                                                         match={ props.match }
+                                                         data={ this.state.portfolioItems }
+                                                         /> } />
+
+              <Route path="/bio" render={ props => <Bio 
+                                                    bio={ this.state.bio }
+                                                    mission={ this.state.mission }
+                                                    learning={this.state.learning }
+                                                    skillset={ this.state.skillset } 
+                                                    /> } />
+            </Switch>
 
           </main>
         </div>
-
       </BrowserRouter>
 
       <Footer />

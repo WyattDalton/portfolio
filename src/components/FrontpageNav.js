@@ -11,8 +11,8 @@ const FrontpageNav = () => {
       <div className="contained">
       
         <div className="nav-items">
-          <NavLink to="/portfolio">my work</NavLink>
-          <NavLink to="bio">about me</NavLink>
+          <NavLink to="/work">my work</NavLink>
+          <NavLink to="/bio">about me</NavLink>
         </div>
 
         <div className="contact-links">

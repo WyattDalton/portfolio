@@ -12,21 +12,16 @@
   }
 
   header {
-    height: 100vh;
-    max-height: 1000px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
     h1 {
-      font-size: 4rem;
+      font-size: 3.6rem;
       margin: 0;
-      color: $theme_bg_light;
+      color: $theme_bg_dark;
       text-align: center;
-
-      -webkit-backdrop-filter: saturate(200%) brightness(100%) blur(3px);
-    	backdrop-filter: saturate(200%) brightness(100%) blur(3px);
 
       @media(min-width: 768px) {
         padding: 5px 40px;

@@ -1,24 +1,5 @@
 import $ from 'jquery';
 
-//   // Front page content fading in and out
-// 	$('.front-page-nav .nav-items > a').on('click', function(e){
-//     e.preventDefault();
-//     let $id = $(this).attr('href');
-//     let height = $($id).height();
-
-
-//     $('.front-dynamic-container').css({
-//       height : height,
-//       opacity : 1,
-//     });
-
-//     $(this).addClass('active').attr('aria-expanded', true);
-//     $(this).siblings('a').removeClass('active').attr('aria-expanded', false);
-//     $($id).addClass('displayed').removeClass('hidden').attr('aria-expanded', true);
-//     $($id).siblings('section').addClass('hidden').removeClass('displayed').attr('aria-expanded', false);
-//   });
-
-
   $(document).ready(function(){
 
 		if($('body').hasClass('home')) {
