@@ -1,0 +1,53 @@
+.placeholder-container {
+    &.contained {
+        width: auto;
+    }
+    .text {
+        display: block;
+        background: #bbbbbb;
+        height: 25px;
+        width: 600px;
+        margin: 8px;
+        animation: placeholder 1.5s infinite;
+
+        &.small {
+            max-width: 300px;
+        }
+
+        &.medium {
+            max-width: 500px
+        }
+    }
+
+    figure {
+        background: #e3e3e3;
+        animation: placeholder 1.5s infinite;
+        height: 500px;
+        .text {
+            display: block;
+    
+            &.small {
+                max-width: 350px;
+            }
+    
+            &.medium {
+                max-width: 500px
+            }
+        }
+    }
+
+    .front-page-nav {
+        display: flex;
+        justify-content: space-between;
+
+        .nav-items {
+            display: flex;
+        }
+    }
+
+
+}
+
+p {
+    font-size: 1.3rem;
+}

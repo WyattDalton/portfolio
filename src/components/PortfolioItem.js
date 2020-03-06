@@ -1,4 +1,7 @@
 import React from 'react';
+import Parser from 'html-react-parser';
+
+// Components
 import TwoColumn from './elements/TwoColumn';
 import Cta from './elements/Cta';
 import Img from './elements/Img';
@@ -14,9 +17,11 @@ const PortfolioItem = ({ match, data }) => {
     let ACF = data.ACF;
 
     // Map through skills used
-    let skillsUsed = ACF.project_details['skills-used'].content.map( (item, index) => {
-        return `${item.item} <span className="v-sep"></span>`;
-    });
+    let skillsUsed = ACF.project_details['skills-used'].content.map( (item) => {
+        return `${item.item} <span class="v-sep"></span>`;
+    }).join(" ");
+
+    console.log(skillsUsed);
 
     // Map through artcile content
     let content = ACF.portfolio_content.map( ( item, index ) => {
@@ -67,7 +72,7 @@ const PortfolioItem = ({ match, data }) => {
                 <p>{ ACF.project_details.overview.content }</p>
 
                 <div className="skills">
-                    { skillsUsed }			
+                    { Parser(skillsUsed) }
                 </div>
 
             </div>

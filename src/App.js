@@ -5,11 +5,14 @@ import {
   Switch,
   Redirect
  } from 'react-router-dom';
+
 import './theme.min.css';
 import './theme.js';
 
 
 // Components
+import Placeholder from './components/Placeholder';
+
 import Hero from './components/hero';
 import FrontpageNav from './components/FrontpageNav';
 import Portfolio from './components/Portfolio';
@@ -55,15 +58,20 @@ class App extends Component {
 
   render() {
 
-    if(this.state.hero.length === 0) return null;
+    if(this.state.hero.length === 0) return <Placeholder />;
 
 
 
     return (
       <>
       <BrowserRouter>
+
+
         <Hero data={ this.state.hero } />
+
+
         <FrontpageNav />
+
         <div id="primary" className="content-area">
             <main id="main" className="site-main front-dynamic-container">
 
@@ -90,6 +98,7 @@ class App extends Component {
 
           </main>
         </div>
+
       </BrowserRouter>
 
       <Footer />

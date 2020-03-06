@@ -1,11 +1,12 @@
 import React from 'react';
+import Parser from 'html-react-parser';
 
 const Content = props => {
     return(
         <div className="port-content-row">
 
             <h3>{ props.heading }</h3>
-            { props.content }
+            { Parser(props.content) }
 
         </div>
     );

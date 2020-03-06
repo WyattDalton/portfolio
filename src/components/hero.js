@@ -1,5 +1,5 @@
 import React from 'react';
-import $ from 'jquery';
+import Parser from 'html-react-parser';
 
 import SocialLinks from './elements/SocialLinks';
 
@@ -18,8 +18,8 @@ const Hero = ({ data }) => {
 
             <img className="bg-img-img" src={ url } alt="" />
             <div className="content-cluster contained">
-                <h2>{ data.h2 }</h2>
-                <h1>{ data.h1 }</h1>
+                <h2>{ Parser(data.h2) }</h2>
+                <h1>{ Parser(data.h1) }</h1>
             </div>
         </section>
 

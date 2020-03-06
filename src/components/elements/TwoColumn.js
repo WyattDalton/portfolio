@@ -1,4 +1,5 @@
 import React from 'react';
+import Parser from 'html-react-parser';
 
 const TwoColumn = props => {
 
@@ -12,7 +13,7 @@ const TwoColumn = props => {
 
             <div className="content-cluster">
                 <h3>{ props.heading }</h3>
-                { props.content }
+                { Parser(props.content) }
             </div>
 
         </div>
