@@ -11,8 +11,8 @@ const Placeholder = () => {
                     <span className="text small"></span>
                 </div>
             </figure>
-            <div className=" front-page-nav">
-                <div className="NavItems">
+            <div className="front-page-nav">
+                <div className="nav-items">
                     <span className="text small"></span><span className="text small"></span>
                 </div>
                 <div className="contact-links"><span className="text small"></span></div>

@@ -16,7 +16,7 @@
 
 .contained {
   padding: 0 20px;
-  width: 100%;
+  width: calc(100vw - 5%);
   max-width: 1500px;
   margin: 0 auto;
 }

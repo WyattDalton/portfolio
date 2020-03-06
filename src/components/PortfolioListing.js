@@ -38,8 +38,8 @@ import {
 
                     <div className="info-cluster left">
                         <h2>{ title }</h2>
-                        <p>{ content.one_line_overview }</p>
-                        <NavLink to={ `${match.url}/${slug}` } className="bttn">View Project</NavLink>
+                        { content.one_line_overview }
+                        <NavLink to={ `${match.url}/${slug}` } className="bttn scrollAnchor">View Project</NavLink>
                     </div>
 
                     <div className="info-cluster bg-blurred right">
