@@ -1,6 +1,6 @@
 {
   "name": "wyatt-dalton-portfolio",
-  "homepage": "http://portfolio.wyattdalton.com/",
+  "homepage": "http://portfolio.wyattdalton.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

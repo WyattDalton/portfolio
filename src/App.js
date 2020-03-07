@@ -64,7 +64,7 @@ class App extends Component {
 
     return (
       <>
-      <BrowserRouter>
+      <BrowserRouter >
 
 
         <Hero data={ this.state.hero } />
