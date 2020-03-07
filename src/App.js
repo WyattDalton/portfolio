@@ -34,7 +34,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('http://wyattdalton.com/wp-json/wp/v2/pages/16')
+    fetch('https://wyattdalton.com/wp-json/wp/v2/pages/16')
       .then(res => res.json())
       .then((data) => {
         this.setState({ 
@@ -46,7 +46,7 @@ class App extends Component {
          })
       });
 
-    fetch('http://wyattdalton.com/wp-json/wp/v2/portfolio?_embed')
+    fetch('https://wyattdalton.com/wp-json/wp/v2/portfolio?_embed')
       .then( res => res.json() )
       .then( (data) => {
         this.setState({
